@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PokeApiComponent } from './poke-api.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./poke-api/poke-api.module').then((m) => m.PokeApiModule),
+    component: PokeApiComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class PokeApiRoutingModule {}
