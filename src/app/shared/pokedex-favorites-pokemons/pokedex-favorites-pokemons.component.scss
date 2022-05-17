@@ -47,4 +47,9 @@ mat-card {
   height: 60vh;
   justify-content: center;
   text-align: center;
+  mat-icon {
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
+  }
 }
