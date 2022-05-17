@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PokeApiModule } from './poke-api/poke-api.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     PokeApiModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

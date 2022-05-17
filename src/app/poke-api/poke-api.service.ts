@@ -10,7 +10,17 @@ import { PokemonInterface } from './interfaces/pokemon-interface';
 export class PokeApiService {
   constructor(private httpClient: HttpClient) {}
 
-  getPokemonById(id: number): Observable<any> {
-    return this.httpClient.get(`${environment.api_url}/pokemon/${id}`);
+  getPokemonById(id: number): Observable<PokemonInterface> {
+    return this.httpClient.get(
+      `${environment.api_url}/pokemon/${id}`
+    ) as Observable<PokemonInterface>;
+  }
+  getPokemonForPagination(
+    offset: number = 0,
+    limit: number = 100
+  ): Observable<PokemonInterface> {
+    return this.httpClient.get(
+      `${environment.api_url}/pokemon?limit=${limit}&offset=${offset}`
+    ) as Observable<PokemonInterface>;
   }
 }

@@ -1,6 +1,7 @@
 import { PokeApiService } from './poke-api.service';
 import { Component, OnInit } from '@angular/core';
 import { PokemonInterface } from './interfaces/pokemon-interface';
+import { ResultsPokemonsInterface } from './interfaces/results-pokemons-interface';
 
 @Component({
   selector: 'app-poke-api',
@@ -9,16 +10,27 @@ import { PokemonInterface } from './interfaces/pokemon-interface';
 })
 export class PokeApiComponent implements OnInit {
   pokemon!: PokemonInterface;
+  pokemons!: any;
 
   constructor(private pokeApiService: PokeApiService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPokemonsForPagination();
+  }
 
   getPokemonById(id: number): void {
     this.pokeApiService
       .getPokemonById(id)
       .subscribe((pokemon: PokemonInterface) => {
         this.pokemon = pokemon;
+      });
+  }
+
+  getPokemonsForPagination(): void {
+    this.pokeApiService
+      .getPokemonForPagination()
+      .subscribe(({ results }: PokemonInterface | any) => {
+        this.pokemons = results;
       });
   }
 }
