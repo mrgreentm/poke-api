@@ -7,7 +7,7 @@ import { PokeApiRoutingModule } from './poke-api-routing.module';
 
 @NgModule({
   imports: [CommonModule, PokeApiRoutingModule, HttpClientModule, SharedModule],
-  declarations: [PokeApiComponent],
+  declarations: [PokeApiComponent, ],
   exports: [PokeApiComponent],
 })
 export class PokeApiModule {}
