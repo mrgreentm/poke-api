@@ -7,9 +7,16 @@ import { PokemonTableComponent } from './pokemon-table/pokemon-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { PokedexHomeComponent } from './pokedex-home/pokedex-home.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatIconModule],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatCardModule,
+  ],
   declarations: [
     PokemonTableComponent,
     PokedexHomeComponent,

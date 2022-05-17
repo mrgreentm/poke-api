@@ -1,0 +1,37 @@
+.favorites-container {
+  margin: 0 auto;
+  width: 450px;
+  border: 2px solid black;
+  height: 500px;
+  background-color: blue;
+  background-image: url("../../../assets/secondary-wallpaper.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  overflow-y: auto;
+}
+.pokemons-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.pokemon-image {
+  border-radius: 100%;
+}
+mat-card {
+  background-color: #2825d3e0;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  border: 3px solid rgb(153, 153, 153);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+}
+

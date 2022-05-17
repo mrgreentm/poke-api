@@ -1,3 +1,9 @@
-<p>
-  pokedex-favorites-pokemons works!
-</p>
+<div class="favorites-container">
+  <app-status-bar></app-status-bar>
+  <div class="pokemons-cards-container">
+    <mat-card *ngFor="let pokemon of favoritesPokemons; let i = index">
+      <p>{{ pokemon?.name }}</p>
+      <img class="pokemon-image" src="{{ pokemon?.sprites?.back_default }}" alt="pokemon" />
+    </mat-card>
+  </div>
+</div>
