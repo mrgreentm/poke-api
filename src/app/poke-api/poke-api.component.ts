@@ -20,7 +20,7 @@ export class PokeApiComponent implements OnInit {
 
   getPokemonById(id: number): void {
     this.pokeApiService
-      .getPokemonById(id)
+      .getPokemonById({ id })
       .subscribe((pokemon: PokemonInterface) => {
         this.pokemon = pokemon;
       });

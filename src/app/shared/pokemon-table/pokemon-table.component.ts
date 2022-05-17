@@ -30,7 +30,6 @@ export class PokemonTableComponent implements OnChanges {
     this.dataSource = new MatTableDataSource<any>(this.pagination);
     this.dataSource.data = this.pagination;
     this.dataSource.paginator = this.paginator;
-    console.log(this.dataSource);
   }
 
   getPokemonsForPagination(offset: number): void {
@@ -40,5 +39,10 @@ export class PokemonTableComponent implements OnChanges {
         this.dataSource = results;
         console.log(results);
       });
+  }
+  getMoreDataForPokemon(apiUrl: string): void {
+    this.pokeApiService.getPokemonById({ apiUrl: apiUrl }).subscribe((res) => {
+      console.log(res);
+    });
   }
 }
