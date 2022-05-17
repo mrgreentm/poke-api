@@ -20,7 +20,12 @@
   border-radius: 100%;
 }
 mat-card {
+  text-align: center;
   background-color: #2825d3e0;
+  p {
+    color: #fff;
+    font-weight: 800;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -35,3 +40,11 @@ mat-card {
   border-radius: 20px;
 }
 
+.empty-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  justify-content: center;
+  text-align: center;
+}

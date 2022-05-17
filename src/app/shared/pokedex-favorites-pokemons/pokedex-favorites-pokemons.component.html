@@ -1,9 +1,17 @@
 <div class="favorites-container">
   <app-status-bar></app-status-bar>
-  <div class="pokemons-cards-container">
+  <div *ngIf="favoritesPokemons.length > 0" class="pokemons-cards-container">
     <mat-card *ngFor="let pokemon of favoritesPokemons; let i = index">
       <p>{{ pokemon?.name }}</p>
-      <img class="pokemon-image" src="{{ pokemon?.sprites?.back_default }}" alt="pokemon" />
+      <img
+        class="pokemon-image"
+        src="{{ pokemon?.sprites?.back_default }}"
+        alt="pokemon"
+      />
     </mat-card>
   </div>
+  <mat-card *ngIf="!favoritesPokemons.length" class="empty-message">
+    <mat-icon>sentiment_very_dissatisfied</mat-icon>
+    <p>Você ainda não selecionou Pokemons favoritos!</p>
+  </mat-card>
 </div>
