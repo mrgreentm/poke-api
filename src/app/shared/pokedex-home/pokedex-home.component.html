@@ -1,20 +1,12 @@
 <div class="home-container">
-  <div class="status-bar">
-    <p>13:30 PM</p>
-    <div class="icons">
-      <mat-icon>screen_rotation</mat-icon>
-      <mat-icon>network_cell</mat-icon>
-      <mat-icon>network_wifi</mat-icon>
-      <mat-icon>battery_std</mat-icon>
-    </div>
-  </div>
+  <app-status-bar></app-status-bar>
   <div class="apps">
     <div class="superior-apps">
       <img
         (click)="redirectToPokedex()"
-      class="pokedex-icon"
-      src="../../../assets/Pokeball_icon-icons.com_67533.svg"
-    />
+        class="pokedex-icon"
+        src="../../../assets/Pokeball_icon-icons.com_67533.svg"
+      />
     </div>
     <div class="inferior-apps">
       <mat-icon> call</mat-icon>
