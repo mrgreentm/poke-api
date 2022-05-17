@@ -8,6 +8,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { PokedexHomeComponent } from './pokedex-home/pokedex-home.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
     MatPaginatorModule,
     MatIconModule,
     MatCardModule,
+    MatTooltipModule,
   ],
   declarations: [
     PokemonTableComponent,

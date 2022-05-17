@@ -25,6 +25,7 @@ mat-card {
   p {
     color: #fff;
     font-weight: 800;
+    text-transform: capitalize;
   }
 }
 
@@ -52,4 +53,7 @@ mat-card {
     width: 80px;
     height: 80px;
   }
+}
+.title-container {
+  text-align: center;
 }

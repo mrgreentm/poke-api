@@ -22,3 +22,20 @@ tr:nth-child(2n) {
 tr:nth-child(2n + 1) {
   background-color: rgba(255, 0, 0, 0.836);
 }
+mat-icon {
+  font-size: 30px;
+  transition: all 0.5s;
+}
+mat-icon:hover{
+  font-size: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+img {
+  width: 50px;
+}
+p {
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+}

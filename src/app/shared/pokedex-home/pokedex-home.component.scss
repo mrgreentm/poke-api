@@ -52,3 +52,7 @@ p {
     padding-left: 13px;
   }
 }
+img:hover,
+mat-icon:hover {
+  cursor: pointer;
+}

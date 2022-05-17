@@ -3,13 +3,18 @@
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Nome</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <td mat-cell *matCellDef="let element">
+        <img src="../../../assets/Pokeball_icon-icons.com_67533.svg" />
+        <p>{{ element.name }}</p>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="url">
       <th mat-header-cell *matHeaderCellDef>Adicionar aos Favoritos!</th>
       <td mat-cell *matCellDef="let element">
-        <mat-icon (click)="getMoreDataForPokemon(element?.url)"
+        <mat-icon
+          matTooltip="Adicionar aos Favoritos"
+          (click)="getMoreDataForPokemon(element?.url)"
           >favorite</mat-icon
         >
       </td>

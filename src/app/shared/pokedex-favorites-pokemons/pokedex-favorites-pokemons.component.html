@@ -1,5 +1,8 @@
 <div class="favorites-container">
   <app-status-bar></app-status-bar>
+  <div *ngIf="favoritesPokemons.length > 0" class="title-container">
+    <h1>Meus Pokemons Favoritos!</h1>
+  </div>
   <div *ngIf="favoritesPokemons.length > 0" class="pokemons-cards-container">
     <mat-card *ngFor="let pokemon of favoritesPokemons; let i = index">
       <p>{{ pokemon?.name }}</p>
