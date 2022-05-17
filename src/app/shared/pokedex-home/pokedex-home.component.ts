@@ -1,3 +1,4 @@
+import { PokeApiService } from './../../poke-api/poke-api.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokedex-home.component.scss'],
 })
 export class PokedexHomeComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private pokeApiService: PokeApiService) {}
 
   ngOnInit() {}
 
-  redirectToPokedex():void {
-    this.router.navigateByUrl('/pokemons')
+  redirectToPokedex(): void {
+    this.router.navigateByUrl('/pokemons');
   }
-
+  showFavoritePokemons(): void {
+    this.router.navigateByUrl('/pokemons/favorites')
+  }
 }

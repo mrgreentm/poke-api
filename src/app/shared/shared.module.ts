@@ -1,3 +1,4 @@
+import { PokedexFavoritesPokemonsComponent } from './pokedex-favorites-pokemons/pokedex-favorites-pokemons.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,17 @@ import { PokedexHomeComponent } from './pokedex-home/pokedex-home.component';
 
 @NgModule({
   imports: [CommonModule, MatTableModule, MatPaginatorModule, MatIconModule],
-  declarations: [PokemonTableComponent, PokedexHomeComponent, StatusBarComponent],
-  exports: [PokemonTableComponent, PokedexHomeComponent, StatusBarComponent],
+  declarations: [
+    PokemonTableComponent,
+    PokedexHomeComponent,
+    StatusBarComponent,
+    PokedexFavoritesPokemonsComponent,
+  ],
+  exports: [
+    PokemonTableComponent,
+    PokedexHomeComponent,
+    StatusBarComponent,
+    PokedexFavoritesPokemonsComponent,
+  ],
 })
 export class SharedModule {}

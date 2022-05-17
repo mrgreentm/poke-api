@@ -1,10 +1,8 @@
 import { PokeApiService } from './../../poke-api/poke-api.service';
 import {
-  AfterViewInit,
   Component,
   Input,
   OnChanges,
-  OnInit,
   ViewChild,
 } from '@angular/core';
 import { PokemonInterface } from 'src/app/poke-api/interfaces/pokemon-interface';
