@@ -1,0 +1,20 @@
+
+table {
+  margin: 0 auto;
+  border: 2px solid black;
+  height: 500px;
+  width: 450px;
+}
+th:nth-child(1),
+th:nth-child(2) {
+  background-color: #fff;
+}
+tr:nth-child(2n) {
+  background-color: rgba(37, 93, 247, 0.788);
+}
+tr:nth-child(2n + 1) {
+  background-color: rgba(255, 0, 0, 0.836);
+}
+mat-paginator {
+  padding: 20px;
+}

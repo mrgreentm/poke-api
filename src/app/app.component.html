@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<div class="pokedex">
+  <div class="superior-buttons">
+    <div class="speaker"></div>
+    <div class="cam">
+      <div class="red-circle"></div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="inferior-buttons">
+    <button (click)="redirectToHome()"></button>
+  </div>
+</div>

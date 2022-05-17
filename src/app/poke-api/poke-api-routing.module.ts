@@ -1,3 +1,4 @@
+import { PokedexHomeComponent } from './pokedex-home/pokedex-home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PokeApiComponent } from './poke-api.component';
@@ -5,8 +6,12 @@ import { PokeApiComponent } from './poke-api.component';
 const routes: Routes = [
   {
     path: '',
-    component: PokeApiComponent,
+    component: PokedexHomeComponent,
   },
+  {
+    path:'pokemons',
+    component: PokeApiComponent
+  }
 ];
 
 @NgModule({
