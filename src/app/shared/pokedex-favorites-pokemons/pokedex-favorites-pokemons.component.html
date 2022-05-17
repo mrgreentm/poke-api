@@ -5,12 +5,17 @@
   </div>
   <div *ngIf="favoritesPokemons.length > 0" class="pokemons-cards-container">
     <mat-card *ngFor="let pokemon of favoritesPokemons; let i = index">
-      <p>{{ pokemon?.name }}</p>
-      <img
-        class="pokemon-image"
-        src="{{ pokemon?.sprites?.back_default }}"
-        alt="pokemon"
-      />
+      <div class="pokemon-data-container">
+        <mat-icon matTooltip="Remover Pokemon" (click)="removePokemonFromFavorites(pokemon?.id)"
+          >close</mat-icon
+        >
+        <p>{{ pokemon?.name }}</p>
+        <img
+          class="pokemon-image"
+          src="{{ pokemon?.sprites?.back_default }}"
+          alt="pokemon"
+        />
+      </div>
     </mat-card>
   </div>
   <mat-card *ngIf="!favoritesPokemons.length" class="empty-message">

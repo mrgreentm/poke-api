@@ -48,4 +48,5 @@ export class PokemonTableComponent implements OnChanges {
       ]);
     });
   }
+
 }

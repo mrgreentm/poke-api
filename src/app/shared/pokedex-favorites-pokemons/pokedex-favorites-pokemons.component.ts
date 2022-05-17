@@ -1,3 +1,4 @@
+import { PokemonInterface } from 'src/app/poke-api/interfaces/pokemon-interface';
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { PokeApiService } from 'src/app/poke-api/poke-api.service';
 
@@ -30,6 +31,14 @@ export class PokedexFavoritesPokemonsComponent implements OnInit, OnChanges {
           });
       }
     }
-    console.log(this.favoritesPokemons);
+  }
+  removePokemonFromFavorites(id: number): void {
+    this.favoritesPokemons = this.favoritesPokemons.filter(
+      (pokemon: PokemonInterface) => pokemon.id !== id
+    );
+    const updatedFavoritePokemonsId = this.favoritesPokemons.map(
+      (pokemon: PokemonInterface) => pokemon.id
+    );
+    this.pokeApiService.favoritePokemons.next(updatedFavoritePokemonsId);
   }
 }

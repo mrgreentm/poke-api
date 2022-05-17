@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { PokedexHomeComponent } from './pokedex-home/pokedex-home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatCardModule,
     MatTooltipModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   declarations: [
     PokemonTableComponent,
