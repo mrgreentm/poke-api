@@ -10,3 +10,5 @@ o comando **npm start**
 Feito isso, acesse no navegador **localhost:4200**.
 Com a página web aberta, você poderá acessar duas seções:
 **Meus Pokemons** e **Favoritos**
+Ao acessar uma seção, para voltar, basta clicar no botão Home
+o botão Home é o botão circular inferior.
