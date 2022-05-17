@@ -8,7 +8,7 @@ import { PokemonInterface } from './interfaces/pokemon-interface';
   providedIn: 'root',
 })
 export class PokeApiService {
-  favoritePokemons: BehaviorSubject<any> = new BehaviorSubject(null);
+  favoritePokemons: BehaviorSubject<Array<any>> = new BehaviorSubject([null]);
   constructor(private httpClient: HttpClient) {}
 
   getPokemonById(filters: {

@@ -7,10 +7,10 @@
     </ng-container>
 
     <ng-container matColumnDef="url">
-      <th mat-header-cell *matHeaderCellDef>Saiba mais!</th>
+      <th mat-header-cell *matHeaderCellDef>Adicionar aos Favoritos!</th>
       <td mat-cell *matCellDef="let element">
         <mat-icon (click)="getMoreDataForPokemon(element?.url)"
-          >exposure_plus_1</mat-icon
+          >favorite</mat-icon
         >
       </td>
     </ng-container>

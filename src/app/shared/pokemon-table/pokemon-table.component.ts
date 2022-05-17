@@ -42,7 +42,12 @@ export class PokemonTableComponent implements OnChanges {
   }
   getMoreDataForPokemon(apiUrl: string): void {
     this.pokeApiService.getPokemonById({ apiUrl: apiUrl }).subscribe((res) => {
-      console.log(res);
+      const currentValue = this.pokeApiService.favoritePokemons.value;
+      const updatedValue = res.id;
+      this.pokeApiService.favoritePokemons.next([
+        ...currentValue,
+        updatedValue,
+      ]);
     });
   }
 }
