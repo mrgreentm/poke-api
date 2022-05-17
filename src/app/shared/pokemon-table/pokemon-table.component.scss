@@ -8,7 +8,7 @@ table {
 }
 th:nth-child(1),
 th:nth-child(2) {
-  background-color: rgb(255, 208, 0);
+  background-color: rgb(0, 89, 255);
   color: #000;
   font-weight: 800;
 }
@@ -17,14 +17,15 @@ tr {
   font-weight: 700;
 }
 tr:nth-child(2n) {
-  background-color: rgba(37, 93, 247, 0.788);
+  background-color: rgba(77, 77, 77, 0.452);
 }
 tr:nth-child(2n + 1) {
-  background-color: rgba(255, 0, 0, 0.836);
+  background-color: rgba(77, 77, 77, 0.242);
 }
 mat-icon {
   font-size: 30px;
   transition: all 0.5s;
+  color: red;
 }
 mat-icon:hover{
   font-size: 50px;
@@ -38,4 +39,5 @@ p {
   color: #fff;
   font-weight: 700;
   text-transform: capitalize;
+  text-shadow: 3px 3px 6px #000;
 }
