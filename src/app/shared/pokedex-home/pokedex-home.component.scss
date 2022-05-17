@@ -31,3 +31,24 @@ p {
     font-size: 50px;
   }
 }
+.superior-apps {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.app {
+  mat-icon {
+    font-size: 80px;
+    color: red;
+    width: 0;
+  }
+}
+.favorite {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+  p {
+    padding-left: 13px;
+  }
+}
